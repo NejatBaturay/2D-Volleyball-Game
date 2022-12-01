@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IngameActivity">
+
+
+    <com.google.android.material.button.MaterialButton
+
+        android:id="@+id/leftarrow"
+
+        android:layout_width="52dp"
+        android:layout_height="47dp"
+
+        android:layout_marginStart="16dp"
+
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="286dp"
+        android:background="@drawable/custombutton"
+        android:rotation="180"
+        android:soundEffectsEnabled="false"
+        app:backgroundTint="@android:color/holo_purple"
+        app:icon="@drawable/rightarrow"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="60dp"
+        app:iconTint="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/direk"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.987"
+        app:strokeColor="#F8F8F8" />
+
+    <com.google.android.material.button.MaterialButton
+
+        android:id="@+id/rightarrow"
+
+        android:layout_width="52dp"
+        android:layout_height="47dp"
+        android:longClickable="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/custombutton"
+        android:rotation="0"
+        android:soundEffectsEnabled="false"
+        app:backgroundTint="@android:color/holo_purple"
+        app:icon="@drawable/rightarrow"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="60dp"
+        app:iconTint="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/leftarrow"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.987"
+        app:strokeColor="#F8F8F8" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="780dp"
+        android:layout_height="411dp"
+        android:background="@drawable/gradient"
+        android:scaleType="fitXY"
+        app:layout_constraintBaseline_toBaselineOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+
+        android:id="@+id/jumpbutton"
+
+        android:layout_width="52dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="576dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/custombutton"
+        android:longClickable="true"
+        android:rotation="-90"
+        android:soundEffectsEnabled="false"
+        app:backgroundTint="@android:color/holo_purple"
+        app:icon="@drawable/rightarrow"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="60dp"
+        app:iconTint="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/surface"
+        app:layout_constraintHorizontal_bias="0.222"
+        app:layout_constraintStart_toEndOf="@+id/leftarrow"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:strokeColor="#F8F8F8" />
+
+    <ImageView
+        android:id="@+id/direk"
+        android:layout_width="22dp"
+        android:layout_height="189dp"
+        android:layout_marginEnd="357dp"
+        app:layout_constraintBottom_toBottomOf="@+id/surface"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/leftarrow"
+        app:srcCompat="@drawable/post" />
+
+    <ImageView
+        android:id="@+id/surface"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/leftarrow"
+        app:srcCompat="@drawable/surface2" />
+
+    <ImageView
+        android:id="@+id/player1"
+        android:layout_width="53dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.833"
+        app:srcCompat="@drawable/player1" />
+
+    <ImageView
+        android:id="@+id/player1rakip"
+        android:layout_width="49dp"
+        android:layout_height="59dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.983"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.833"
+        app:srcCompat="@drawable/player2" />
+
+    <ImageView
+        android:id="@+id/volleyballreal"
+        android:layout_width="19dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="240dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/volleyballreal" />
+
+    <TextView
+        android:id="@+id/player1score"
+        android:layout_width="43dp"
+        android:layout_height="47dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.034"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.079" />
+
+    <TextView
+        android:id="@+id/player2score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/solyandirek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/yandirek" />
+
+    <ImageView
+        android:id="@+id/sagyandirek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="720dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/yandirek" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
